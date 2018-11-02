@@ -1,12 +1,28 @@
 package com.bc.freebook.vo;
 
 public class FreeBookVO {
+	
 	private String idx, name, subject, content, pwd, regdate;
 	
 	public FreeBookVO() {
 		super();
 	}
 
+	public FreeBookVO(String idx, String name, String subject, String content,String pwd,
+			String regdate) {
+		super();
+		this.idx = idx;
+		this.name = name;
+		this.subject = subject;
+		this.content = content;
+		this.pwd = pwd;
+		this.regdate = regdate;
+	}
+	
+	
+	
+	
+	
 	public String getIdx() {
 		return idx;
 	}
@@ -57,7 +73,7 @@ public class FreeBookVO {
 
 	@Override
 	public String toString() {
-		return "GuestbookVO [idx=" + idx + ", name=" + name + ", subject=" + subject + ", "
+		return "FreeBookVO [idx=" + idx + ", name=" + name + ", subject=" + subject + ", "
 				+ "content=" + content + ", pwd=" + pwd + ", regdate=" + regdate + "]";
 	}
 	

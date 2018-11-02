@@ -10,6 +10,24 @@
 	</select>
 	
 	
+	<insert id="insert" parameterType="com.bc.freebook.vo.FreeBookVO">
+		INSERT INTO FREEBOOK
+			   (IDX, NAME, SUBJECT, 
+			    CONTENT, PWD, REGDATE)
+		VALUES (GUESTBOOK_SEQ.NEXTVAL, #{name}, #{subject},
+			    #{content}, #{pwd}, SYSDATE)
+	</insert>
+	
+	<update id="update" parameterType="com.bc.freebook.vo.FreeBookVO">
+		UPDATE FREEBOOK
+		SET NAME = #{name},
+		    SUBJECT = #{subject}, 
+		    CONTENT = #{content}, 
+		    PWD = #{pwd}, 
+		    REGDATE = SYSDATE
+		WHERE IDX = #{idx}
+	</update>
+	
 </mapper>  
 
 
