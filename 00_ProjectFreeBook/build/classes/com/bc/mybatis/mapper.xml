@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- mapper 태그의 namespace 속성 필수 작성  -->  
+<mapper namespace="FreeBook">
+	<select id="all" resultType="com.bc.mybatis.FreeBookVO">
+		SELECT * FROM FREEBOOK  ORDER BY IDX
+	</select>
+	
+	<select id="one" resultType="com.bc.mybatis.FreeBookVO"
+		parameterType="string">
+		SELECT * FROM FREEBOOK WHERE IDX = #{idx}
+	</select>	
+	
+	<insert id="insert" parameterType="com.bc.mybatis.FreeBookVO">
+		INSERT INTO FREEBOOK 
+			   (IDX, NAME, SUBJECT, 
+			    CONTENT, PWD, REGDATE)
+		VALUES (FREEBOOK_SEQ.NEXTVAL, #{name}, #{subject},
+			    #{content}, #{pwd}, SYSDATE)
+	</insert>
+	
+	<update id="update" parameterType="com.bc.mybatis.FreeBookVO">
+		UPDATE FREEBOOK 
+		SET NAME = #{name},
+		    SUBJECT = #{subject}, 
+		    CONTENT = #{content}, 
+		    PWD = #{pwd}, 
+		    REGDATE = SYSDATE
+		WHERE IDX = #{idx}
+	</update>
+	
+	<delete id="delete" parameterType="string">
+		DELETE FROM FREEBOOK WHERE IDX = #{idx}
+	</delete>	
+</mapper>  
+
+
+
+
+
+
