@@ -9,15 +9,16 @@
 <title>Welcome!</title>
 </head>
 <body>
-<nav class = "navbar-expand  nabar-dark bg-dark"> 
+<nav class = "navbar-expand  navbar-dark bg-dark"> 
 	<div class = "container">
-		<div class= "navar-headr">
-			<a class = "nabar-brend" href="./welcome.jsp">|Home</a>
-			<a class = "nabar-brend" href="./welcome.jsp">|Free</a>
-			<a class = "nabar-brend" href="./welcome.jsp">|Message</a>
+		<div class= "navar-header">
+			<a class = "navbar-brend" href="./welcome.jsp">|Home</a>
+			<a class = "navbar-brend" href="./free.jsp">|Free</a>
+			<a class = "navbar-brend" href="./message.jsp">|Message</a>
 		</div>
 	</div>
 </nav>	
+
 	
 	<%! String greeting = "사이트에 온 것을 환영합니다."; 
 		String tagline = "{상단에 위치한 목록을 클릭하십시오}"; %>
