@@ -3,6 +3,9 @@ package com.bc.mybatis;
 public class FreebookVO {
 	private String idx,name, subject, content, pwd, regdate;
 
+	public FreebookVO() {} //기본생성자 
+	
+	
 	public FreebookVO(String idx, String name, String subject, String content, 
 					  String pwd, String regdate) {
 		super();
