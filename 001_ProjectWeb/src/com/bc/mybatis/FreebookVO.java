@@ -1,14 +1,18 @@
 package com.bc.mybatis;
 
 public class FreebookVO {
-	private String idx,name, subject, content, pwd, regdate;
+	private String idx, name, subject, content, pwd, regdate;
 
-	public FreebookVO() {} //기본생성자 
+	public FreebookVO() {
+		super();
+	} //기본생성자 
+	
 	
 	
 	public FreebookVO(String idx, String name, String subject, String content, 
 					  String pwd, String regdate) {
 		super();
+		
 		this.idx = idx;
 		this.name = name;
 		this.subject = subject;
@@ -16,6 +20,8 @@ public class FreebookVO {
 		this.pwd = pwd;
 		this.regdate = regdate;
 	}
+	
+	
 
 	public String getIdx() {
 		return idx;
@@ -65,11 +71,15 @@ public class FreebookVO {
 		this.regdate = regdate;
 	}
 
+
+
 	@Override
 	public String toString() {
-		return "FreebookVO [idx=" + idx + ", name=" + name + ", subject=" + subject + ", content=" + content + ", pwd="
-				+ pwd + ", regdate=" + regdate + "]";
+		return "FreebookVO [idx=" + idx + ", name=" + name + ", subject=" + subject
+				+ ", content=" + content + ", pwd=" + pwd + ", regdate=" + regdate + "]";
 	}
+
+	
 	
 	
 

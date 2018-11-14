@@ -31,7 +31,7 @@
 <style>
 	#table {
 		width: 500px;
-    	height: 300px;
+    	height: 400px;
     	margin-left: auto;
    	    margin-right: auto;
     	 
@@ -62,7 +62,10 @@
 	function update_go(frm) {
 		frm.action = "update.jsp";
 		frm.submit();
-		
+	}
+	function delete_go(frm) {
+		frm.action = "delete.jsp";
+		frm.submit();
 	}
 </script>	
 </head>
@@ -103,9 +106,9 @@
 				</td>
 			</tr>
 		</tfoot>
-		</div>
-		</table>
-		</form>
+	</div>
+	</table>
+	</form>
 </div>
 </body>
 </html>

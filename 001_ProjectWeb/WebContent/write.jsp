@@ -10,6 +10,20 @@
 <meta charset="UTF-8">
 <title>Write</title>
 
+<style>
+	#table {
+		width:60%;
+		margin: auto;
+	}
+	#book {
+		width: 60%;
+		margin: auto;
+		
+	} 
+
+</style> 
+
+
 <link rel = "stylesheet" 
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,23 +32,19 @@
  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>	
 
-<script>
-	function save_go(frm) {
-		frm.action = "write_ok.jsp"
-		frm.submit();
-	}
 
-</script>
+
 </head>
 <body>
 <div class="jumbotron">
 	<div class="container"> 
-		<h2 class= "diplay-3">게시판 : 입력화면</h2>
+		<h2 class= "diplay-3" id="book">게시판 : 입력화면</h2>
 		<hr>
-		<p>[<a href="free.jsp">글 목록으로 이동</a>]</p>
+		<p id="book">[<a href="free.jsp">글 목록으로 이동</a>]</p>
 	</div>
+	
 <div id ="table">
-<form method="post">
+<form method="post" action="write_ok.jsp" >
 <table>
 	<tbody>
 		<tr>
@@ -65,8 +75,8 @@
 	<tfoot>
 		<tr>
 			<td colspan="2">
-				<input type="button" class="btn btn-secondary" 
-					value="저 장" onclick="save_go(this.form)">
+				<input type="submit" class="btn btn-secondary" 
+					value="저 장">
 				<input type="reset" class="btn btn-dark" value="초기화">
 			</td>
 		</tr>

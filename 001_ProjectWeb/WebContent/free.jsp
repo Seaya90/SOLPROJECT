@@ -25,8 +25,8 @@
 <title>FreeBook</title>
 <style>
 	#table {
-		width: 500px;
-    	height: 300px;
+		width: 700px;
+    	height: 600px;
     	margin-left: auto;
    	    margin-right: auto;
     	 
@@ -60,6 +60,7 @@
 			<h1 class= "diplay-3">글 목록</h1>
 				<a href="write.jsp">
 				<button type="button" class="btn btn-info">글 작 성</button></a>
+				
 				<a href="welcome.jsp">
 				<button type="button" class="btn btn-secondary">HOME으로 이동</button></a>
 	</div>
@@ -68,13 +69,14 @@
 <table>
 	<thead>
 		<tr>
-			<th> 번 호  </th>
-			<th> Name </th>
+			<th> 게시물번호 </th>
+			<th> 작성자 </th>
 			<th> 글제목 </th>
 			<th> 작성일 </th>
 		</tr>
  	</thead>
 	<tbody>
+
 	<c:if test="${not empty attr_list }">	
 	<c:forEach var="vo" items="${attr_list }">
 		<tr>
@@ -87,6 +89,7 @@
 		</tr>
 	</c:forEach>
 	</c:if>	
+	
 	<c:if test="${empty attr_list }">		
 		<tr>
 			<td colspan="4">입력된 자료가 없습니다</td>

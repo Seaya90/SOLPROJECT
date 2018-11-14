@@ -7,11 +7,13 @@
 <mapper	namespace="freebook">
 	<select id="all" resultType="com.bc.mybatis.FreebookVO">
 		SELECT * FROM FREE ORDER BY IDX
+		
 	</select>
 	
 	<select id="one" resultType="com.bc.mybatis.FreebookVO" 
 		parameterType="string">
-		SELECT * FROM FREE WHERE IDX = #{idx}
+		SELECT  * FROM FREE WHERE IDX = #{idx}
+		
 	</select>
 	
 	<insert id="insert" parameterType="com.bc.mybatis.FreebookVO">
@@ -31,6 +33,12 @@
 		    REGDATE = SYSDATE
 		WHERE IDX = #{idx}
 	</update>
+	
+	<delete id ="delete" parameterType="string">
+		DELETE FROM FREE WHERE IDX = #{idx}
+		
+	</delete>
 
 
+	
 </mapper>

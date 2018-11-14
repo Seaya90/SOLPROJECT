@@ -17,7 +17,6 @@
 	ss.close();
 	
 	if (result > 0) {
-
 %>  
 	<script>
 		alert("정상입력 처리 되었습니다. \n목록으로 이동")

@@ -18,6 +18,8 @@
   <mappers>
     <mapper resource="com/bc/mybatis/mapper.xml"/>
   </mappers>
+  
+
 </configuration>
 
 
