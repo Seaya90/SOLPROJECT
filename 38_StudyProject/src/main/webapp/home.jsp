@@ -17,7 +17,7 @@
   padding: 80px 40px;
   margin-bottom: 30px;
   color: white;
-  background-color: #b3b3ff;
+  background-color: #ccfff5;
 }
 
 

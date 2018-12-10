@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
 <!DOCTYPE>
 <html>
 <head>
@@ -49,54 +48,39 @@ ul.a {
 		color: black;
     	text-shadow: 2px 2px 5px darkblue, 0 0 5px #b3e6ff;
     	font-size: 20px;
-
-}	
-	
-
+    }	
 </style>	
-
-
 <meta charset="UTF-8">
-<title>로그인</title>
+<title>회원가입</title>
 </head>
 <body>
 
-<%! String greeting = " Login ";%>
-		
-		
+
+<%! String member = "회원가입"; %>
 <div class = "jumbotron">
 	<div class = "container">
 		<h1 class = "display-3">
-			<%= greeting%>
+			<%= member%>
 		</h1>
 	</div>
 </div>
 
-
-
-<div class = "container">
-	<div class = "text-center">
+<div class="container">
+<form action="home.do" method="post">
 <center>
-<form action="login_proc.do" method="post" >
 <table border="1" cellpadding="0" cellspacing="0">
 	<tr>
-		<td bgcolor="#ccfff5">아이디</td>
-		<td><input type="text" name="id"/></td>
+	  <td colspan="2" align="center" bgcolor="#ccfff5">
+	  <b><font size =5>회원가입</font></b>
+	  </td>
 	</tr>
-	<tr> 
-		<td bgcolor="#ccfff5">비밀번호</td>
-		<td><input type="password" name="pwd"/></td>
-	</tr>
-	<tr>
-		<td colspan="2" align="center">
-			<a href="login_proc.jsp"><input type="submit" value="로그인"/></a>
-			<a href="member.jsp"><input type="submit" value="회원가입"/></a>
-		</td>
-	</tr>
-
-	
-</table>
-</form>
 </center>
+</table>	
+</form>
+
+</div>
+
+
+
 </body>
 </html>
