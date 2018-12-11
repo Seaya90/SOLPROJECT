@@ -1,6 +1,7 @@
 package com.spring.view.controller;
 
 import java.io.IOException;
+import java.sql.Date;
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -17,6 +18,7 @@ import com.spring.biz.user.impl.UserDAO;
 //@WebServlet("*.do")
 public class DispatcherServlet extends HttpServlet{
 	private static final long seralVersionUID = 1L;
+	
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
 		throws ServletException, IOException {
@@ -93,19 +95,29 @@ public class DispatcherServlet extends HttpServlet{
 
 		//2. 화면 네비게이션(로그인 페이지)
 		response.sendRedirect("login.jsp");
-	} else if (path.equals("/insertBoard.do")) {
-		System.out.println(">>> 글 등록 요청 처리");
+		
+	} else if (path.equals("/member.do")) {
+		System.out.println(">>> 회원가입 요청처리");
+		
 		//1. 전달 받은 데이타 추출
-//		request.setCharacterEncoding("UTF-8"); //한글처리
-//		String title = request.getParameter("title");
-//		String writer = request.getParameter("writer");
-//		String content = request.getParameter("content");
-//		
-//		//2. DB 연동 처리(데이타 입력)
-//		BoardVO vo = new BoardVO();
-//		vo.setTitle(title);
-//		vo.setWriter(writer);
-//		vo.setContent(content);
+		request.setCharacterEncoding("UTF-8"); //한글처리
+		String id = request.getParameter("id");
+		String pwd = request.getParameter("pwd");
+		String name = request.getParameter("name");
+		String gender = request.getParameter("gender");
+		String phone = request.getParameter("phone");
+		String address = request.getParameter("address");
+		String member_seq = request.getParameter("member_seq");
+		//2. DB 연동 처리(데이타 입력)
+		UserVO vo = new UserVO();
+		vo.setId(id);
+		vo.setPwd(pwd);
+		vo.setName(name);
+		vo.setGender(gender);
+		vo.setPhone(phone);
+		vo.setAddress(address);
+		vo.setMember_seq(Integer.parseInt(member_seq));
+		
 //		
 //		BoardDAO boardDAO = new BoardDAO();	
 //		boardDAO.insertBoard(vo);

@@ -17,46 +17,21 @@
   padding: 80px 40px;
   margin-bottom: 30px;
   color: white;
-  background-color: #ccfff5;
+  background-color: #ccfff3;
 }
 
-
-h3,h4 {
-		color: white;
-    	text-shadow: 3px 1px 2px darkblue, 0 0 28px #00ff00, 0 0 5px #00ff00;
-    	text-align: center;
-    	font-family: "Times New Roman", Times, serif;
-	}
-	
-h1 {
-	color: white;
-    text-shadow: 6px 3px 1px darkblue, 0 0 30px #00ff00, 0 0 5px #00ff00;
-    text-align: center;
-    font-family: "Times New Roman", Times, serif;
+h1.fon {
+	color: #000066;
 }
-	
-.eng {
-    -webkit-column-count: 3; /* Chrome, Safari, Opera */
-   
-    column-count: 3;
-
-    -webkit-column-gap: 40px; /* Chrome, Safari, Opera */
-    column-gap: 40px;
-
-    -webkit-column-rule: 4px double #00001a; /* Chrome, Safari, Opera */
-    -moz-column-rule: 4px double #00001a; /* Firefox */
-    column-rule: 4px double #00001a;
-}
-
-ul.a {
-		color: black;
-    	text-shadow: 2px 2px 5px darkblue, 0 0 5px #b3e6ff;
-    	font-size: 20px;
-
-}	
-	
-
+p {
+	color: #000066;}
 </style>	
+<div class="jumbotron">
+  <div class="container text-center">
+    <h1 class="fon">Study Home</h1>      
+    <p>Study...study..</p>
+  </div>
+</div>
 	
 <title>Home!</title>
 </head>
@@ -80,24 +55,16 @@ ul.a {
           <li><a href="#">자유게시판</a></li>
           <li><a href="#">일본어 정보방</a></li>
         </ul> 
-       <li><a href="login.jsp">로그인&회원가입</a></li>  
-      <li><a href="#">채팅창</a></li>
+       <li><a href="#">채팅창</a></li>
+       <li><a href="login.jsp">로그인</a></li> 
+       <li><a href="member.jsp">회원가입</a></li>
      
     </ul>
   </div>
 </nav>
 
 	
-	<%! String greeting = " Well Come ";%>
-		
-		
-<div class = "jumbotron">
-	<div class = "container">
-		<h1 class = "display-3">
-			<%= greeting%>
-		</h1>
-	</div>
-</div>
+	
 
 
 

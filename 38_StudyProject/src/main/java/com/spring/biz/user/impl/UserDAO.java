@@ -31,6 +31,10 @@ public class UserDAO {
 			stmt = conn.prepareStatement(MEMBER_GET);
 			stmt.setString(1, vo.getId());
 			stmt.setString(2, vo.getPwd());
+			stmt.setString(3, vo.getName());
+			stmt.setString(4, vo.getGender());
+			stmt.setString(5, vo.getPhone());
+			stmt.setString(6, vo.getAddress());
 			rs = stmt.executeQuery();
 			
 			if (rs.next()) {
@@ -38,6 +42,8 @@ public class UserDAO {
 				user.setId(rs.getString("ID"));
 				user.setPwd(rs.getString("PWD"));
 				user.setName(rs.getString("NAME"));
+				user.setGender(rs.getString("gender"));
+				user.setPhone(rs.getString("phone"));
 				user.setAddress(rs.getString("ADDRESS"));
 			} 
 			
