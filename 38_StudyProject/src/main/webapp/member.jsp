@@ -1,18 +1,11 @@
-<%@page import="com.spring.biz.user.UserVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%
-	UserVO user = (UserVO)session.getAttribute("user");
-
-%>    
-    
-
 
 <!DOCTYPE>
 <html>
 <head>
 
- <title>LOGIN</title>
+ <title>회원가입</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -44,39 +37,38 @@ h1.fon {
   <form action="member_proc.do">
     <div class="form-group">
       <label for="id">ID:</label>
-      <input type="id" class="form-control" name="id" value="<%=user.getId() %>">
+      <input type="id" class="form-control" name="id">
     </div>
     
     <div class="form-group">
       <label for="pwd">Password:</label>
-      <input type="password" class="form-control" name="pwd" value="<%=user.getPwd() %>">
+      <input type="password" class="form-control" name="pwd">
     </div>
     
     <div class="form-group">
       <label for="name">Name:</label>
-      <input type="text" class="form-control" name="name" value="<%=user.getName()%>">
+      <input type="text" class="form-control" name="name">
     </div>
     
      <div class="checkbox">
       <h4>Gender:</h4>
-      <label><input type="radio" name="gender" value="<%=user.getGender()%>">여</label>
-      <label><input type="radio" name="gender" value="<%=user.getGender()%>">남</label>
+      <label><input type="radio" name="gender">여</label>
+      <label><input type="radio" name="gender">남</label>
     </div>
     
     <div class="form-group">
       <label for="phone">Phone:</label>
-      <input type="text" class="form-control" name="phone" value="<%=user.getPhone()%>">
+      <input type="text" class="form-control" name="phone">
      </div>
     <br>
     
     <div class="form-group">
       <label for="address">Address:</label>
-      <input type="text" class="form-control" name="address" value="<%=user.getAddress()%>">
+      <input type="text" class="form-control" name="address">
     </div>
      
     <div class="form-group">
     	<th>가입일</th>
-      <td><%=user.getRegdate() %></td>
      </div>
   
      
